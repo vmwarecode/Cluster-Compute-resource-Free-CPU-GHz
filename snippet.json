@@ -1,0 +1,11 @@
+{"f0770c36-527a-4719-9ec7-58f581b016a4": {
+   "resourceKinds": [{
+      "resourceKindKey": "ClusterComputeResource",
+      "adapterKindKey": "VMWARE"
+   }],
+   "modificationTime": 1619639367470,
+   "name": "Cluster Free CPU",
+   "formula": "sum(${this, metric=cpu|capacity_provisioned, depth=1})/1000- sum(${this, metric=cpu|usagemhz_average, depth=1})/1000",
+   "description": "Cluster Compute resource Free CPU GHz",
+   "unitId": "ghz"
+}}
